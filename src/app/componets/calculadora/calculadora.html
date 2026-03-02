@@ -1,0 +1,23 @@
+@if (calculadoraSrv) {
+<ul>
+    <li><input type="number" {(ngModel)}="num1" placeholder="Número 1"></li>
+    <li><input type="number" {(ngModel)}="num2" placeholder="Número 2"></li>
+    <li>{{soma(num1, num2)}}</li>
+</ul>
+<ul>
+    <li><input type="number" {(ngModel)}="num3" placeholder="Número 3"></li>
+    <li><input type="number" {(ngModel)}="num4" placeholder="Número 4"></li>
+    <li>{{subtrai(num3, num4)}}</li>
+</ul>
+<ul>
+    <li><input type="number" {(ngModel)}="num5" placeholder="Número 5"></li>
+    <li><input type="number" {(ngModel)}="num6" placeholder="Número 6"></li>
+    <li>{{divide(num5, num6)}}</li>
+</ul>   
+<ul>
+    <li><input type="number" {(ngModel)}="num7" placeholder="Número 7"></li>
+    <li><input type="number" {(ngModel)}="num8" placeholder="Número 8"></li>
+    <li>{{multiplica(num7, num8)}}</li>
+</ul>
+
+}
