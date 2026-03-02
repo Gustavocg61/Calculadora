@@ -9,4 +9,13 @@ import { RouterOutlet } from '@angular/router';
 })
 export class App {
   protected readonly title = signal('calculadora');
+calculadoraSrv: any;
+num1: any;
+num2: any;
+num3: any;
+num4: any;
+num5: any;
+num6: any;
+num7: any;
+num8: any;
 }
