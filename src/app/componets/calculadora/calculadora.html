@@ -1,23 +1,33 @@
-@if (calculadoraSrv) {
-<ul>
-    <li><input type="number" {(ngModel)}="num1" placeholder="Número 1"></li>
-    <li><input type="number" {(ngModel)}="num2" placeholder="Número 2"></li>
-    <li>{{soma(num1, num2)}}</li>
-</ul>
-<ul>
-    <li><input type="number" {(ngModel)}="num3" placeholder="Número 3"></li>
-    <li><input type="number" {(ngModel)}="num4" placeholder="Número 4"></li>
-    <li>{{subtrai(num3, num4)}}</li>
-</ul>
-<ul>
-    <li><input type="number" {(ngModel)}="num5" placeholder="Número 5"></li>
-    <li><input type="number" {(ngModel)}="num6" placeholder="Número 6"></li>
-    <li>{{divide(num5, num6)}}</li>
-</ul>   
-<ul>
-    <li><input type="number" {(ngModel)}="num7" placeholder="Número 7"></li>
-    <li><input type="number" {(ngModel)}="num8" placeholder="Número 8"></li>
-    <li>{{multiplica(num7, num8)}}</li>
-</ul>
+<main class="calc-container">
+  @if (calculadoraSrv) {
+    
+    <ul class="op-card soma">
+      <li class="card-header">Soma</li>
+      <li><input type="number" [(ngModel)]="num1" placeholder="Número 1"></li>
+      <li><input type="number" [(ngModel)]="num2" placeholder="Número 2"></li>
+      <li class="result-display">{{ soma(num1, num2) }}</li>
+    </ul>
 
-}
+    <ul class="op-card subtrai">
+      <li class="card-header">Subtração</li>
+      <li><input type="number" [(ngModel)]="num3" placeholder="Número 3"></li>
+      <li><input type="number" [(ngModel)]="num4" placeholder="Número 4"></li>
+      <li class="result-display">{{ subtrai(num3, num4) }}</li>
+    </ul>
+
+    <ul class="op-card divide">
+      <li class="card-header">Divisão</li>
+      <li><input type="number" [(ngModel)]="num5" placeholder="Número 5"></li>
+      <li><input type="number" [(ngModel)]="num6" placeholder="Número 6"></li>
+      <li class="result-display">{{ (divide(num5, num6) || divide(num5, num6) === 0) ? divide(num5, num6) : 0 }}</li>
+    </ul>
+
+    <ul class="op-card multiplica">
+      <li class="card-header">Multiplicação</li>
+      <li><input type="number" [(ngModel)]="num7" placeholder="Número 7"></li>
+      <li><input type="number" [(ngModel)]="num8" placeholder="Número 8"></li>
+      <li class="result-display">{{ multiplica(num7, num8) }}</li>
+    </ul>
+
+  }
+</main>
